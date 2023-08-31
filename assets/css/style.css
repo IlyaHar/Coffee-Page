@@ -1,0 +1,605 @@
+:root {
+    --brown-color: #140200;
+    --brown-light-color: rgba(20, 2, 0, 0.8);
+    --gold-color: #b68834;
+    --text-light-color: #777777;
+    --text-dark-color: #222222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--text-light-color);
+}
+
+.navigation {
+    background: var(--brown-light-color);
+}
+
+.navigation header .nav .nav-item .nav-link {
+    color: white;
+    font-size: 12px;
+}
+
+.navigation header .nav .nav-item .nav-link:hover {
+    color: var(--gold-color);
+}
+
+.banner {
+    background-size: cover;
+    background: url(header-bg.jpg) no-repeat center;
+    height: 920px;
+    margin-top: -10px; 
+}
+
+.banner-content {
+    padding-top: 220px;
+    padding-left: 15px; 
+    padding-right: 15px; 
+    font-family: "Poppins", sans-serif;
+}
+
+.banner-caption {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.banner-text {
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+
+.banner-btn {
+    background: white;
+    color: black;
+    border: solid 1px white;
+    list-style-type: none;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 5px 35px 5px 35px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.banner-btn:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+
+.about-caption {
+    color: var(--gold-color);
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+}
+
+.about-text {
+    font-size: 35px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.about-text2 {
+   color: black;
+   font-weight: 400;
+   font-family: "Poppins", sans-serif;
+}
+
+.about-text3 {
+    color: #777777;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.625em;
+}
+
+.video-container {
+    position: relative;
+    margin: 0 auto;
+}
+
+.video-bg {
+    max-width: 100%; 
+    height: auto; 
+    filter: brightness(0.30);
+}
+ 
+.play-icon {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    cursor: pointer;
+}
+
+.price {
+    background: url(menu-bg.jpg) no-repeat center;
+    margin-top: 100px;
+    font-family: "Poppins", sans-serif;
+    min-height: 500px;
+    padding-bottom: 200px;
+    background-size: cover;
+}
+
+.card {
+    min-width: 350px;
+    background: white;
+    box-shadow: 0px 10px 30px 0px rgba(182, 136, 52, 0.2);
+    margin-left: 20px;
+    margin-right: 20px;   
+}
+
+.cards-price .card {
+    border: none;
+    border-radius: 10px;
+}
+
+.cards-price1 .card {
+    border: none;
+    border-radius: 10px;
+}
+
+.cards-price1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.cards-price {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.price-coffee {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px; 
+}
+
+.card-text {
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.price-text, .price-text2 {
+    text-align: center;
+}
+
+.price-text {
+    padding-top: 120px;
+    font-weight: 600;
+    color: var(--text-dark-color);
+}
+
+.price-text2 {
+    color: #777777;
+    font-size: 15px;
+}
+
+.money {
+    color: var(--gold-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-text {
+    color: #777777;
+    font-size: 14px;
+}
+
+.price-coffee h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark-color);
+}
+
+.gallery-text {
+    padding-top: 110px;
+    padding-bottom: 60px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.gallery-text h1 {
+    color: var(--text-dark-color);
+}
+
+.gallery-text p {
+    color: #777777;
+}
+
+.g4, .g5 {
+    margin-top: 6.2px;
+}
+
+.gold-block {
+    background: var(--gold-color);
+    font-family: "Poppins", sans-serif;
+    margin-top: 130px;
+    min-height: 800px;
+}
+
+.title-gold-block {
+    padding-top: 120px;
+}
+
+.text-gold-block {
+    font-size: 14.5px;
+    font-weight: 300;
+}
+
+.star {
+    vertical-align: middle;
+    font-size: 12px;
+    margin-top: -2px;
+    color: orange;
+}
+
+.comments {
+    color: white;
+    margin-top: 80px;
+}
+
+.star1 {
+    margin-left: 15px;
+    vertical-align: middle;
+    font-size: 12px;
+    margin-top: -2px;
+    color: orange;
+}
+
+.comment2 {
+    margin-left: 50px;
+}
+
+.text-comment {
+    font-weight: 300;
+    font-size: 14.5px;
+}
+
+.numbers {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.number {
+    margin-left: 95px;
+    margin-right: 95px;
+    font-weight: 300;
+}
+
+.num {
+    font-size: 60px;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;  
+}
+
+.blog {
+    font-family: "Poppins", sans-serif;  
+}
+
+.blog-title {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.blog-title2 {
+    color: #777777;
+    text-align: center;
+    font-size: 14.5px;
+}
+
+.blog-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.image2 {
+    margin-left: 30px;
+}
+
+.buttons-blog {
+    margin-top: 20px;
+}
+
+.blog-button1 {
+    border: none;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 4px 20px;
+    font-size: 12px;
+    color: var(--text-dark-color);
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.blog-button1:hover {
+    border: none;
+    background: var(--gold-color);
+    color: white;
+}
+
+.blog-button2 {
+    border: none;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 4px 20px;
+    font-size: 12px;
+    color: var(--text-dark-color);
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.blog-button2:hover {
+    border: none;
+    background: var(--gold-color);
+    color: white;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+}
+
+.blog-text1, .blog-text2 {
+    margin-top: 20px;
+}
+
+.title {
+    font-weight: 600;
+    color: var(--text-dark-color);
+    font-size: 17px;
+}
+
+.text {
+    color: #777777;
+    font-size: 14px;
+}
+
+.date {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+footer {
+    background: url(footer-bg.jpg);
+    font-family: "Poppins", sans-serif;
+    margin-top: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 500px;  
+    width: 100%;
+    background-size: cover;
+}
+
+.about-us {
+    margin-top: 185px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 60px; 
+}
+
+.foot-text {
+    color: white;
+    margin-left: 60px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-top: 30px;
+}
+
+.search-text {
+    margin-top: 185px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    color: white;
+}
+
+.news {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.stay {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.search {
+    border: none;
+    outline: none;
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: 300;
+    padding-left: 20px;
+    font-size: 14px;
+    padding: 10px 18px;
+    width: 400px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    appearance: none;
+    display: none;
+}
+
+.search-container {
+    display: flex;
+}
+
+.foot-btn {
+    width: 40px;
+    background: var(--gold-color);
+    border: none;
+}
+
+.social {
+    margin-top: 185px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 70px;
+}
+
+.follow {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.let {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.social a {
+    text-decoration: none; 
+    color: silver; 
+    margin-right: 20px;
+}
+ 
+li {
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and ( max-width : 1200px ) {
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-section {
+        margin: 0 auto;
+        text-align: center;
+    }
+    footer {
+        background-size: auto 100%;
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-direction: column;   
+        text-align: center;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .search-text {
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+    
+    .about-us {
+        margin-top: 130px;
+        margin-left: 0px;
+    }
+
+    .foot-text {
+        margin-left: 0px;
+    }
+
+    .social {
+        margin-top: 30px;
+        padding-bottom: 50px;
+        margin-left: 0px;
+    }
+    
+    .social a {
+        margin-right: 10px;
+        margin-left: 10px;
+    }  
+
+    .comments {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comment2 {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+
+    .numbers {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .number {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .blog-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image2 {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
+
+@media screen and ( max-width : 850px ) {
+    .cards-price, .cards-price1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .card {
+        margin-top: 30px;
+    }
+
+    .price {
+        background-size: auto 100%;
+        padding-bottom: 70px;  
+    }
+}
+
+@media screen and ( min-width : 850px ) {
+    .card {
+        width: 350px; 
+    }
+}
+
+
+

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f33227ae-739b-4c8a-9da1-9b49e97d3236" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2TQh6sYrrZdvairgHHFNUsMYENC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/ilya/PhpstormProjects/Coffee-Lending",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "terminal",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f33227ae-739b-4c8a-9da1-9b49e97d3236" name="Changes" comment="" />
+      <created>1690981045897</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690981045897</updated>
+      <workItem from="1690981050094" duration="144000" />
+      <workItem from="1690981238279" duration="982000" />
+      <workItem from="1690982303426" duration="2000" />
+      <workItem from="1690982318050" duration="2000" />
+      <workItem from="1690982337547" duration="61000" />
+      <workItem from="1690982456600" duration="100000" />
+      <workItem from="1690982586482" duration="632000" />
+      <workItem from="1690983273320" duration="27000" />
+      <workItem from="1690983348114" duration="21000" />
+      <workItem from="1690983374745" duration="261000" />
+      <workItem from="1692270613143" duration="2179000" />
+      <workItem from="1692273158235" duration="5855000" />
+      <workItem from="1692807215609" duration="648000" />
+      <workItem from="1692865759350" duration="13574000" />
+      <workItem from="1693297677840" duration="5000" />
+      <workItem from="1693297696455" duration="7000" />
+      <workItem from="1693297757220" duration="7000" />
+      <workItem from="1693301503370" duration="97000" />
+      <workItem from="1693302049294" duration="21000" />
+      <workItem from="1693468101272" duration="905000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
