@@ -31,7 +31,7 @@ body {
 
 .banner {
     background-size: cover;
-    background: url(header-bg.jpg) no-repeat center;
+    background: url(../img/header-bg.jpg) no-repeat center;
     height: 920px;
     margin-top: -10px; 
 }
@@ -384,7 +384,7 @@ body {
 }
 
 footer {
-    background: url(footer-bg.jpg);
+    background: url(../img/footer-bg.jpg);
     font-family: "Poppins", sans-serif;
     margin-top: 100px;
     background-repeat: no-repeat;
