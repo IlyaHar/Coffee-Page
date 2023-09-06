@@ -1,25 +1,26 @@
-<div class="container ">
+
+<div class="container">
     <div class="row">
         <div class="col-12 d-flex about">
             <div class="video-container">
-                <img class="video-bg" src="assets/img/video-bg.jpg" alt="video">
-                <img class="play-icon" src="assets/img/play-icon.png" alt="play">
+                <img src="<?= IMAGES_URI ?>/<?= $content['about_us']['video']['img'] ?? '' ?>" >
+                <img class="play-icon" href="<?= $content['about_us']['video']['source'] ?? '' ?>" src="assets/img/play-icon.png" alt="play">
             </div>
-            <section class="px-5 mt-5 about-section ">
+            <section class="px-5 mt-5 about-section">
                 <span class="about-caption">
-                    LIVE COFFEE MAKING PROCESS.
+                    <?= $content['about_us']['text']['subtitle'] ?? '' ?>
                 </span>
                 <h2 class="about-text">
-                    We Telecast our
-                    <br>Coffee Making Live
+                    <?= $content['about_us']['text']['title'] ?? '' ?>
                 </h2>
                 <p class="about-text2">
-                    We are here to listen from you deliver exellence
+                    <?= $content['about_us']['text']['quote'] ?? '' ?>
                 </p>
                 <p class="about-text3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br>eiusmod temp or incididunt ut labore et dolore magna aliqua. <br>Ut enim ad minim.
+                    <?= $content['about_us']['text']['description'] ?? '' ?>
                 </p>
-                <img src="assets/img/signature.png" alt="">
+
+                <img src="<?= IMAGES_URI ?>/<?= $content['about_us']['text']['img'] ?? '' ?>" >
             </section>
         </div>
     </div>

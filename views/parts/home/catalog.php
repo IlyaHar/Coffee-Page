@@ -1,6 +1,7 @@
+
 <div class="price">
-    <h1 class="price-text">What kind of Coffee we serve for you</h1>
-    <p class="price-text2">Who are in extremely love with eco friendly system.</p>
+    <h1 class="price-text"><?= $content['catalog']['title'] ?? '' ?></h1>
+    <p class="price-text2"><?= $content['catalog']['description'] ?? '' ?></p>
     <div class="cards-price1">
         <div class="card">
             <div class="price-coffee">
