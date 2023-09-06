@@ -17,16 +17,20 @@
         <div class="row">
             <div class="col-12">
                 <header class="d-flex flex-wrap justify-content-center py-3">
+                    <?php if ($commonBlocks['navigation']['logo']): ?>
                     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                        <img class="mt-3" src="<?= IMAGES_URI ?>/logo.png" alt="logo">
+                        <img class="mt-3" src="<?= IMAGES_URI ?>/<?= $commonBlocks['navigation']['logo']?>" alt="logo">
                     </a>
+                    <?php endif; ?>
+                    <?php if ($commonBlocks['navigation']['links']): ?>
                     <ul class="nav nav-pills mx-5">
-                        <li class="nav-item"><a href="#banner" class="nav-link" aria-current="page">HOME</a></li>
-                        <li class="nav-item"><a href="#about" class="nav-link">ABOUT</a></li>
-                        <li class="nav-item"><a href="#catalog" class="nav-link">COFFEE</a></li>
-                        <li class="nav-item"><a href="#review" class="nav-link">REVIEW</a></li>
-                        <li class="nav-item"><a href="#blog" class="nav-link">BLOG</a></li>
+                        <?php foreach ($commonBlocks['navigation']['links'] as $link): ?>
+                        <li class="nav-item">
+                            <a href="<?= $link['href'] ?>" class="nav-link" aria-current="page"><?= $link['title'] ?></a>
+                        </li>
+                        <?php endforeach; ?>
                     </ul>
+                    <?php endif; ?>
                 </header>
             </div>
         </div>

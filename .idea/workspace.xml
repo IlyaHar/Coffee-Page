@@ -5,46 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f33227ae-739b-4c8a-9da1-9b49e97d3236" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3ef99414-489f-4e31-82b8-6457bff8dce9/storage_v2/_src_/schema/coffeeshop.wvSk6w.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/constants.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/router.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/pages/home.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/parts/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/parts/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/parts/home/about-us.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/parts/home/banner.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/parts/home/blog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/parts/home/catalog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/parts/home/gallery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/parts/home/reviews.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/php/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/php/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Coffee-Lending.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Coffee-Lending.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/db.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/DB.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ef99414-489f-4e31-82b8-6457bff8dce9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ef99414-489f-4e31-82b8-6457bff8dce9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ef99414-489f-4e31-82b8-6457bff8dce9/storage_v2/_src_/schema/taxi.HjY2AA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ef99414-489f-4e31-82b8-6457bff8dce9/storage_v2/_src_/schema/taxi.HjY2AA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/configs/constants.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/home/about-us.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/home/about-us.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/home/banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/home/banner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/home/catalog.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/home/catalog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/home/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/home/gallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/home/reviews.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/home/reviews.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/larapack/dd" />
@@ -84,6 +77,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets" />
     </key>
@@ -118,7 +114,12 @@
       <workItem from="1693468101272" duration="2416000" />
       <workItem from="1693471085489" duration="6725000" />
       <workItem from="1693486377477" duration="3476000" />
-      <workItem from="1693577579419" duration="3123000" />
+      <workItem from="1693577579419" duration="6449000" />
+      <workItem from="1693825024644" duration="3635000" />
+      <workItem from="1693904490811" duration="2787000" />
+      <workItem from="1693915120940" duration="4073000" />
+      <workItem from="1693919504128" duration="5127000" />
+      <workItem from="1693992252372" duration="9669000" />
     </task>
     <servers />
   </component>

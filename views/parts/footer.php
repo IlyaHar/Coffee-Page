@@ -1,24 +1,28 @@
+
+<?php $footer = $commonBlocks['footer'] ?? []; ?>
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-12 d-flex footer-container">
                 <section>
-                <p class="about-us ">
-About Us
-</p>
+
+                <p class="about-us "><?= $footer['about']['title'] ?? '' ?></p>
+
+
                 <p class="foot-text">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br>eiusmod tempor incididunt ut labore dolore magna aliqua.
+                    <?= $footer['about']['description'] ?? '' ?>
+
                 </p>
                 <p class="foot-text">
-Copyright ©2023 All rights reserved | This template is made with <br><i class="far fa-heart" aria-hidden="true" style="color: #b68834;"></i> by <span style="color: #b68834;">Colorlib</span>
+                    <?= $footer['about']['copyright'] . ' |' ?? '' ?> This template is made with <br><i class="far fa-heart" aria-hidden="true" style="color: #b68834;"></i> by <span style="color: #b68834;">Colorlib</span>
                 </p>
                 </section>
                 <section class="search-text">
                     <p class="news">
-Newsletter
+                        <?= $footer['form']['title'] ?? '' ?>
                     </p>
                     <p class="stay">
-Stay update with our latest
+                        <?= $footer['form']['description'] ?? '' ?>
 </p>
                <div class="search-container">
                     <input placeholder="Enter Email" class="search" type="search">
@@ -27,27 +31,25 @@ Stay update with our latest
                     </button>
                 </div>
                 </section>
+                <?php if ($footer['follow']['socials']): ?>
+
                 <section class="social">
                     <p class="follow">
-Follow Us
+                        <?= $footer['follow']['title'] ?? '' ?>
 </p>
                     <p class="let">
-Let us be social
+                        <?= $footer['follow']['description'] ?? '' ?>
 </p>
-                    <a href="#">
-                        <i style="color: silver;" class="fab fa-facebook"></i>
-                    </a>
-                    <a href="#">
-                        <i style="color: silver;" class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#">
-                        <i style="color: silver;" class="fab fa-dribbble"></i>
-                    </a>
-                    <a href="#">
-                        <i style="color: silver;" class="fab fa-behance"></i>
-                    </a>
+                    <?php foreach ($footer['follow']['socials'] as $social): ?>
+                        <a href="<?= $social['href'] ?>">
+                            <i style="color: silver;" class="fab <?= $social['icon'] ?>"></i>
+                        </a>
+                    <?php endforeach; ?>
+
                 </section>
             </div>
+            <?php endif; ?>
+
         </div>
     </div>
 </footer>
