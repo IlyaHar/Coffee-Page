@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container" id="gallery">
     <div class="row">
         <div class="col-12 gallery-text ">
             <h1><?= $content['gallery']['title'] ?? '' ?></h1>

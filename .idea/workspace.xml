@@ -5,22 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f33227ae-739b-4c8a-9da1-9b49e97d3236" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/db.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/DB.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms/controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms/handlers/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms/handlers/params_helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms/handlers/registration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/session.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/admin/dashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/admin/parts/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/admin/parts/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/admin/products/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/admin/products/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/admin/products/parts/table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/auth/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/auth/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/parts/notification.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ef99414-489f-4e31-82b8-6457bff8dce9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ef99414-489f-4e31-82b8-6457bff8dce9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configs/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/configs/constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/configs/router.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/parts/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/parts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/parts/home/about-us.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/home/about-us.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/parts/home/banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/home/banner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/home/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/home/blog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/parts/home/catalog.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/home/catalog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/parts/home/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/home/gallery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/parts/home/reviews.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/home/reviews.php" afterDir="false" />
@@ -81,6 +93,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views/pages/admin/products" />
       <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
@@ -119,7 +132,10 @@
       <workItem from="1693904490811" duration="2787000" />
       <workItem from="1693915120940" duration="4073000" />
       <workItem from="1693919504128" duration="5127000" />
-      <workItem from="1693992252372" duration="9669000" />
+      <workItem from="1693992252372" duration="10213000" />
+      <workItem from="1694076275195" duration="14330000" />
+      <workItem from="1694166318411" duration="17738000" />
+      <workItem from="1694192919292" duration="831000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-<div class="blog">
+<div class="blog" id="blog">
     <h1 class="blog-title">What kind of Coffee we serve for you</h1>
     <p class="blog-title2">Who are in extremely love with eco friendly system.</p>
     <div class="blog-images">

@@ -1,5 +1,5 @@
 
-<section class="banner">
+<section class="banner" id="banner">
     <div class="container">
         <div class="row">
             <div class=" banner-content col-12 col-md-9 col-xl-6 ">
