@@ -1,5 +1,5 @@
 
-<div class="price">
+<div class="price" id="catalog">
     <h1 class="price-text"><?= $content['catalog']['title'] ?? '' ?></h1>
     <p class="price-text2"><?= $content['catalog']['description'] ?? '' ?></p>
     <div class="cards-price1">
