@@ -1,92 +1,35 @@
-
+<?php
+$products = getProducts();
+if (!empty($products)):
+    $products = array_chunk($products, 3);
+?>
 <div class="price" id="catalog">
     <h1 class="price-text"><?= $content['catalog']['title'] ?? '' ?></h1>
     <p class="price-text2"><?= $content['catalog']['description'] ?? '' ?></p>
+    <?php foreach ($products as $card): ?>
     <div class="cards-price1">
-        <div class="card">
+        <?php foreach($card as $product): ?>
+        <div
+                data-bs-toggle="modal"
+                data-bs-target="#buyProduct"
+                data-id="<?= $product['id'] ?>"
+                data-qty="<?= $product['quantity'] ?>"
+                data-name="<?= $product['name'] ?>"
+                data-price="<?= $product['price'] ?>"
+                class="card">
             <div class="price-coffee">
-                <h4>Cappuccino</h4>
-                <p class="money">$49</p>
+                <h4><?= $product['name'] ?></h4>
+                <p class="money">$<?= $product['price'] ?></p>
             </div>
             <p class="card-text">
-                Usage of the Internet is becoming more common due to rapid advance.
+                <?= $product['description'] ?>
             </p>
         </div>
-        <div class="card">
-            <div class="price-coffee">
-                <h4>Americano</h4>
-                <p class="money">$49</p>
-            </div>
-            <p class="card-text">
-                Usage of the Internet is becoming more common due to rapid advance.
-            </p>
-        </div>
-        <div class="card">
-            <div class="price-coffee">
-                <h4>Espresso</h4>
-                <p class="money">$49</p>
-            </div>
-            <p class="card-text">
-                Usage of the Internet is becoming more common due to rapid advance.
-            </p>
-        </div>
+        <?php endforeach; ?>
+
     </div>
-    <div class="cards-price">
-        <div class="card">
-            <div class="price-coffee">
-                <h4>Macchiato</h4>
-                <p class="money">$49</p>
-            </div>
-            <p class="card-text">
-                Usage of the Internet is becoming more common due to rapid advance.
-            </p>
-        </div>
-        <div class="card">
-            <div class="price-coffee">
-                <h4>Mocha</h4>
-                <p class="money">$49</p>
-            </div>
-            <p class="card-text">
-                Usage of the Internet is becoming more common due to rapid advance.
-            </p>
-        </div>
-        <div class="card">
-            <div class="price-coffee">
-                <h4>Coffee Latte</h4>
-                <p class="money">$49</p>
-            </div>
-            <p class="card-text">
-                Usage of the Internet is becoming more common due to rapid advance.
-            </p>
-        </div>
-    </div>
-    <div class="cards-price">
-        <div class="card">
-            <div class="price-coffee">
-                <h4>Piccolo Latte</h4>
-                <p class="money">$49</p>
-            </div>
-            <p class="card-text">
-                Usage of the Internet is becoming more common due to rapid advance.
-            </p>
-        </div>
-        <div class="card">
-            <div class="price-coffee">
-                <h4>Ristretto</h4>
-                <p class="money">$49</p>
-            </div>
-            <p class="card-text">
-                Usage of the Internet is becoming more common due to rapid advance.
-            </p>
-        </div>
-        <div class="card">
-            <div class="price-coffee">
-                <h4>Affogato</h4>
-                <p class="money">$49</p>
-            </div>
-            <p class="card-text">
-                Usage of the Internet is becoming more common due to rapid advance.
-            </p>
-        </div>
-    </div>
-</div>
+
+    <?php endforeach; ?>
+
+<?php
+endif;

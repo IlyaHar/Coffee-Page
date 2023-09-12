@@ -54,7 +54,11 @@
     </div>
 </footer>
         </div>
+<?php include_once PARTS_DIR . 'modals/buy_product.php'; ?>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="<?= ASSETS_URI ?>/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?= ASSETS_URI ?>/js/script.js"></script>
-<script src="bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="<?= ASSETS_URI ?>/js/buy_product.js"></script>
 </body>
+</html>
 </html>

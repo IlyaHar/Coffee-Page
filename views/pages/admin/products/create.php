@@ -6,10 +6,10 @@ extract(formSessionData(SESSION_KEYS::CREATE_PRODUCT))
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8">
-                <div class="card">
+                <div class="card w-100">
                     <div class="card-header text-center"><h3>Create Product</h3></div>
                     <div class="card-body">
-                        <form action="/" method="POST">
+                        <form  action="/" method="POST">
                             <input type="hidden" name="type" value="create_product">
 
                             <div class="mb-3">

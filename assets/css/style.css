@@ -20,6 +20,13 @@ body {
     background: var(--brown-light-color);
 }
 
+#notify {
+    position: absolute !important;
+    top: 7%;
+    right: 1%;
+}
+
+
 .navigation header .nav .nav-item .nav-link {
     color: white;
     font-size: 12px;
@@ -135,7 +142,8 @@ body {
     background: white;
     box-shadow: 0px 10px 30px 0px rgba(182, 136, 52, 0.2);
     margin-left: 20px;
-    margin-right: 20px;   
+    margin-right: 20px;
+    cursor: pointer;
 }
 
 .cards-price .card {
@@ -490,6 +498,7 @@ ul li a {
     text-decoration: none;
     color: white;
 }
+
 
 @media screen and ( max-width : 1200px ) {
     .about {
