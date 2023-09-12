@@ -8,7 +8,7 @@
     <title>Coffee Lending</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="<?= ASSETS_URI ?>/css/style.css">
-    <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= ASSETS_URI ?>/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>

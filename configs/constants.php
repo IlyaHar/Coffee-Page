@@ -41,4 +41,5 @@ enum SESSION_KEYS : string
 
     case LOGIN = 'login';
     case CREATE_PRODUCT = 'create_product';
+    case EDIT_PRODUCT = 'edit_product';
 }
