@@ -33,13 +33,13 @@
                            <div class="col-4 additional-item">
                                <div class="form-check form-switch">
                                    <label class="form-check-label" for="addition-<?= $addition['id'] ?>"><?= $addition['name'] ?></label>
-                                   <input value="<?= $addition['id'] ?>" class="form-check-input additional-toggle" type="checkbox" role="switch" name="additions[]" id="addition-<?= $addition['id'] ?>">
+                                   <input value="<?= $addition['id'] ?>" class="form-check-input additional-toggle " type="checkbox" role="switch" name="additions[]" id="addition-<?= $addition['id'] ?>">
                                </div>
                                <div class="input-group mt-1 mb-3">
                                    <span class="input-group-text additional-price">
                                        $<span class="price-addition"><?= $addition['price'] ?></span>
                                    </span>
-                                   <input type="number" class="form-control additional-qty additional-qty-<?= $addition['id'] ?>" name="additions-qty[]" max="<?= $addition['quantity'] ?>">
+                                   <input min="1" disabled type="number" class="form-control additional-qty additional-qty-<?= $addition['id'] ?>" name="additions-qty[]" max="<?= $addition['quantity'] ?>">
                                    <span class="input-group-text additional-total"></span>
                                </div>
                            </div>
