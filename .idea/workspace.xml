@@ -6,7 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="f33227ae-739b-4c8a-9da1-9b49e97d3236" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ef99414-489f-4e31-82b8-6457bff8dce9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ef99414-489f-4e31-82b8-6457bff8dce9.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ef99414-489f-4e31-82b8-6457bff8dce9/storage_v2/_src_/schema/coffeeshop.wvSk6w.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ef99414-489f-4e31-82b8-6457bff8dce9/storage_v2/_src_/schema/coffeeshop.wvSk6w.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ef99414-489f-4e31-82b8-6457bff8dce9/storage_v2/_src_/schema/taxi.HjY2AA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ef99414-489f-4e31-82b8-6457bff8dce9/storage_v2/_src_/schema/taxi.HjY2AA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/forms/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/forms/handlers/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/handlers/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/forms/handlers/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/handlers/order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/forms/handlers/params_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/handlers/params_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/buy_product.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/buy_product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/modals/buy_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/modals/buy_product.php" afterDir="false" />
+>>>>>>> e0ecced (add cart and create order)
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,8 +151,13 @@
       <workItem from="1695224733993" duration="2470000" />
       <workItem from="1695292627602" duration="2506000" />
       <workItem from="1695295377161" duration="1511000" />
+<<<<<<< HEAD
       <workItem from="1695630547855" duration="230000" />
       <workItem from="1695630842867" duration="399000" />
+=======
+      <workItem from="1695398796184" duration="11107000" />
+      <workItem from="1695547029054" duration="13200000" />
+>>>>>>> e0ecced (add cart and create order)
     </task>
     <servers />
   </component>
