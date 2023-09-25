@@ -1,0 +1,10 @@
+.btn-upd {
+    float: right;
+    display: flex;
+    justify-content: end;
+    margin-top: 3px;
+}
+
+.card-footer {
+    height: 60px;
+}
