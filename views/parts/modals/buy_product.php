@@ -39,7 +39,13 @@
                                    <span class="input-group-text additional-price">
                                        $<span class="price-addition"><?= $addition['price'] ?></span>
                                    </span>
-                                   <input min="1" disabled type="number" class="form-control additional-qty additional-qty-<?= $addition['id'] ?>" name="additions-qty[]" max="<?= $addition['quantity'] ?>">
+                                   <input type="number"
+                                          min="1"
+                                          class="form-control additional-qty additional-qty-<?= $addition['id'] ?>"
+                                          name="additions_qty[]"
+                                          max="<?= $addition['quantity'] ?>"
+                                          disabled
+                                   />
                                    <span class="input-group-text additional-total"></span>
                                </div>
                            </div>

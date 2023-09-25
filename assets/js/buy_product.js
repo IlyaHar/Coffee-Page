@@ -25,6 +25,7 @@ $(document).on('click', selectors.catalogItem, function() {
     console.log('data', itemData)
     const $form = $(selectors.modal.form)
     const $qtyProductField = $form.find(selectors.modal.product.quantity)
+    $(selectors.modal.productId).val(itemData.id)
 
     $qtyProductField.val(1)
     $qtyProductField.attr('max', itemData.qty)

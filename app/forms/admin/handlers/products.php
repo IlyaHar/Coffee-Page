@@ -49,6 +49,7 @@ function productValidation(array $fields, SESSION_KEYS $key, $uri = '/admin/prod
     unset($fields['is_main']);
     unset($fields['product_id']);
 
+
     $isEmptyFields = emptyFields($fields, $key);
     $isNegativeValues = validateOnNegativeValues($fields['price'], $fields['quantity']);
 
