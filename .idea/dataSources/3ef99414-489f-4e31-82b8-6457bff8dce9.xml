@@ -1074,13 +1074,13 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="taxi">
-      <IntrospectionTimestamp>2023-09-01.17:16:12</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-09-01.14:16:12</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-09-24.15:58:47</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-24.12:58:47</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="293" parent="1" name="coffeeshop">
-      <IntrospectionTimestamp>2023-09-01.17:16:10</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-09-01.14:16:10</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-09-24.15:58:46</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-24.12:58:46</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="294" parent="1" name="root">
@@ -1336,7 +1336,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="348" parent="304" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>7</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1467,7 +1467,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="375" parent="307" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>81</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1515,7 +1515,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>name</UnderlyingIndexName>
     </key>
     <column id="385" parent="308" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>6</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1530,37 +1530,42 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="388" parent="308" name="email">
-      <DasType>varchar(150)|0s</DasType>
-      <NotNull>1</NotNull>
+    <column id="388" parent="308" name="balance">
+      <DasType>float unsigned|0s</DasType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>4</Position>
     </column>
-    <column id="389" parent="308" name="password">
-      <DasType>text|0s</DasType>
+    <column id="389" parent="308" name="email">
+      <DasType>varchar(150)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="390" parent="308" name="is_admin">
-      <DasType>tinyint(1)|0s</DasType>
-      <DefaultExpression>0</DefaultExpression>
+    <column id="390" parent="308" name="password">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <index id="391" parent="308" name="PRIMARY">
+    <column id="391" parent="308" name="is_admin">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <index id="392" parent="308" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="392" parent="308" name="email">
+    <index id="393" parent="308" name="email">
       <ColNames>email</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="393" parent="308" name="PRIMARY">
+    <key id="394" parent="308" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="394" parent="308" name="email">
+    <key id="395" parent="308" name="email">
       <UnderlyingIndexName>email</UnderlyingIndexName>
     </key>
   </database-model>
