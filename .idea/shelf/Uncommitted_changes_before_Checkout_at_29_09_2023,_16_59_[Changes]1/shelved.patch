@@ -1,0 +1,217 @@
+Index: views/parts/home/banner.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n<section class=\"banner\" id=\"banner\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\" banner-content col-12 col-md-9 col-xl-6 \">\n                <h3 class=\"banner-caption\"><?= $content['banner']['title'] ?? '' ?></h3>\n                <h1 class=\"banner-text\">\n                    <?= $content['banner']['subtitle'] ?? '' ?>\n                </h1>\n                <?php if ($content ['banner']['link']): ?>\n                <a href=\"<?= $content ['banner']['link']['href'] ?>\" class=\"banner-btn btn-info\"><?= $content ['banner']['link']['title'] ?></a>\n                <?php endif ?>\n            </div>\n        </div>\n    </div>\n</section>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/views/parts/home/banner.php b/views/parts/home/banner.php
+--- a/views/parts/home/banner.php	
++++ b/views/parts/home/banner.php	
+@@ -7,9 +7,7 @@
+                 <h1 class="banner-text">
+                     <?= $content['banner']['subtitle'] ?? '' ?>
+                 </h1>
+-                <?php if ($content ['banner']['link']): ?>
+-                <a href="<?= $content ['banner']['link']['href'] ?>" class="banner-btn btn-info"><?= $content ['banner']['link']['title'] ?></a>
+-                <?php endif ?>
++
+             </div>
+         </div>
+     </div>
+Index: .idea/dataSources.local.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"dataSourceStorageLocal\" created-in=\"PS-232.9921.55\">\n    <data-source name=\"@localhost\" uuid=\"3ef99414-489f-4e31-82b8-6457bff8dce9\">\n      <database-info product=\"MySQL\" version=\"8.1.0\" jdbc-version=\"4.2\" driver-name=\"MySQL Connector/J\" driver-version=\"mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)\" dbms=\"MYSQL\" exact-version=\"8.1.0\" exact-driver-version=\"8.0\">\n        <extra-name-characters>#@</extra-name-characters>\n        <identifier-quote-string>`</identifier-quote-string>\n        <jdbc-catalog-is-schema>true</jdbc-catalog-is-schema>\n      </database-info>\n      <case-sensitivity plain-identifiers=\"exact\" quoted-identifiers=\"exact\" />\n      <secret-storage>master_key</secret-storage>\n      <user-name>root</user-name>\n      <schema-mapping>\n        <introspection-scope>\n          <node kind=\"schema\">\n            <name qname=\"@\" />\n            <name qname=\"taxi\" />\n            <name qname=\"coffeeshop\" />\n          </node>\n        </introspection-scope>\n      </schema-mapping>\n    </data-source>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.local.xml b/.idea/dataSources.local.xml
+--- a/.idea/dataSources.local.xml	
++++ b/.idea/dataSources.local.xml	
+@@ -5,7 +5,6 @@
+       <database-info product="MySQL" version="8.1.0" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MYSQL" exact-version="8.1.0" exact-driver-version="8.0">
+         <extra-name-characters>#@</extra-name-characters>
+         <identifier-quote-string>`</identifier-quote-string>
+-        <jdbc-catalog-is-schema>true</jdbc-catalog-is-schema>
+       </database-info>
+       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+       <secret-storage>master_key</secret-storage>
+Index: views/pages/admin/parts/footer.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n<script src=\"<?= ASSETS_URI ?>/bootstrap/js/bootstrap.bundle.min.js\"></script>\n<script type=\"application/javascript\" src=\"<?= ASSETS_URI ?>/js/script.js\"></script>\n<script src=\"https://code.jquery.com/jquery-3.7.1.min.js\" integrity=\"sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=\" crossorigin=\"anonymous\"></script>\n\n</body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/views/pages/admin/parts/footer.php b/views/pages/admin/parts/footer.php
+--- a/views/pages/admin/parts/footer.php	
++++ b/views/pages/admin/parts/footer.php	
+@@ -1,7 +1,6 @@
+-
++<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+ <script src="<?= ASSETS_URI ?>/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script type="application/javascript" src="<?= ASSETS_URI ?>/js/script.js"></script>
+-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+-
++<script type="application/javascript" src="<?= ASSETS_URI ?>/js/admin.js"></script>
+ </body>
+ </html>
+Index: views/parts/header.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\"\n          content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n    <title>Coffee Lending</title>\n    <link href=\"https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700\" rel=\"stylesheet\">\n    <link rel=\"stylesheet\" href=\"<?= ASSETS_URI ?>/css/style.css\">\n    <link rel=\"stylesheet\" href=\"<?= ASSETS_URI ?>/bootstrap/css/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css\">\n</head>\n<body>\n<?php include_once PARTS_DIR . 'notification.php' ?>\n<section class=\"navigation fixed-top\">\n    <div class=\"container \">\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <header class=\"d-flex flex-wrap justify-content-center py-3\">\n                    <?php if ($commonBlocks['navigation']['logo']): ?>\n                    <a href=\"/\" class=\"d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none\">\n                        <img class=\"mt-3\" src=\"<?= IMAGES_URI ?>/<?= $commonBlocks['navigation']['logo']?>\" alt=\"logo\">\n                    </a>\n                    <?php endif; ?>\n                    <?php if ($commonBlocks['navigation']['links']): ?>\n                    <ul class=\"nav nav-pills mx-5\">\n                        <?php foreach ($commonBlocks['navigation']['links'] as $link): ?>\n                        <li class=\"nav-item\">\n                            <a href=\"<?= $link['href'] ?>\" class=\"nav-link\" aria-current=\"page\"><?= $link['title'] ?></a>\n                        </li>\n                        <?php endforeach; ?>\n                        <li class=\"nav-item\">\n                            <a href=\"/cart\" class=\"nav-link\" aria-current=\"page\"><i class=\"fa-solid fa-cart-shopping\"></i></a>\n                        </li>\n\n                        <?php if (!isAuth()): ?>\n                        <li class=\"nav-item\">\n                            <a href=\"/login\" class=\"nav-link\" aria-current=\"page\">Sign In</a>\n                        </li>\n                        <li class=\"nav-item\">\n                            <span class=\"nav-link disabled\">|</span>\n                        </li>\n                        <li class=\"nav-item\">\n                            <a href=\"/register\" class=\"nav-link\" aria-current=\"page\">Sign Up</a>\n                        </li>\n                        <?php else: ?>\n                            <li class=\"nav-item\">\n                                <span class=\"nav-link disabled\">|</span>\n                            </li>\n                            <li class=\"nav-item dropdown\">\n                                <a class=\"nav-link dropdown-toggle\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-expanded=\"false\">User Actions</a>\n                                <ul class=\"dropdown-menu\">\n                                    <li><a href=\"/account\" class=\"dropdown-item\">Account</a></li>\n                                    <?php if (isAdmin()): ?>\n                                        <li class=\"nav-item\">\n                                            <a href=\"/admin/dashboard\" class=\"dropdown-item\">Admin panel</a>\n                                        </li>\n                                    <?php endif; ?>\n                                    <li><hr class=\"dropdown-divider\"></li>\n                                    <li><a class=\"dropdown-item\" href=\"/logout\">Log Out</a></li>\n                                </ul>\n                            </li>\n\n                        <?php endif; ?>\n                    </ul>\n                    <?php endif; ?>\n                </header>\n            </div>\n        </div>\n    </div>\n</section>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/views/parts/header.php b/views/parts/header.php
+--- a/views/parts/header.php	
++++ b/views/parts/header.php	
+@@ -20,16 +20,17 @@
+                 <header class="d-flex flex-wrap justify-content-center py-3">
+                     <?php if ($commonBlocks['navigation']['logo']): ?>
+                     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+-                        <img class="mt-3" src="<?= IMAGES_URI ?>/<?= $commonBlocks['navigation']['logo']?>" alt="logo">
++                        <img class="mt-3" src="<?= IMAGES_URI ?>/<?= $commonBlocks['navigation']['logo']?>" width="50" alt="logo">
+                     </a>
+                     <?php endif; ?>
+-                    <?php if ($commonBlocks['navigation']['links']): ?>
+                     <ul class="nav nav-pills mx-5">
++                        <?php if ($commonBlocks['navigation']['links']): ?>
+                         <?php foreach ($commonBlocks['navigation']['links'] as $link): ?>
+                         <li class="nav-item">
+                             <a href="<?= $link['href'] ?>" class="nav-link" aria-current="page"><?= $link['title'] ?></a>
+                         </li>
+                         <?php endforeach; ?>
++                        <?php endif; ?>
+                         <li class="nav-item">
+                             <a href="/cart" class="nav-link" aria-current="page"><i class="fa-solid fa-cart-shopping"></i></a>
+                         </li>
+@@ -61,10 +62,8 @@
+                                     <li><a class="dropdown-item" href="/logout">Log Out</a></li>
+                                 </ul>
+                             </li>
+-
+                         <?php endif; ?>
+                     </ul>
+-                    <?php endif; ?>
+                 </header>
+             </div>
+         </div>
+Index: .idea/php.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"MessDetectorOptionsConfiguration\">\n    <option name=\"transferred\" value=\"true\" />\n  </component>\n  <component name=\"PHPCSFixerOptionsConfiguration\">\n    <option name=\"transferred\" value=\"true\" />\n  </component>\n  <component name=\"PHPCodeSnifferOptionsConfiguration\">\n    <option name=\"highlightLevel\" value=\"WARNING\" />\n    <option name=\"transferred\" value=\"true\" />\n  </component>\n  <component name=\"PhpIncludePathManager\">\n    <include_path>\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-mbstring\" />\n      <path value=\"$PROJECT_DIR$/vendor/larapack/dd\" />\n      <path value=\"$PROJECT_DIR$/vendor/composer\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/deprecation-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/var-dumper\" />\n    </include_path>\n  </component>\n  <component name=\"PhpProjectSharedConfiguration\" php_language_level=\"8.2\" />\n  <component name=\"PhpStanOptionsConfiguration\">\n    <option name=\"transferred\" value=\"true\" />\n  </component>\n  <component name=\"PsalmOptionsConfiguration\">\n    <option name=\"transferred\" value=\"true\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/php.xml b/.idea/php.xml
+--- a/.idea/php.xml	
++++ b/.idea/php.xml	
+@@ -19,7 +19,9 @@
+       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+     </include_path>
+   </component>
+-  <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
++  <component name="PhpProjectSharedConfiguration" php_language_level="8.2">
++    <option name="suggestChangeDefaultLanguageLevel" value="false" />
++  </component>
+   <component name="PhpStanOptionsConfiguration">
+     <option name="transferred" value="true" />
+   </component>
+Index: app/forms/handlers/content/blocks/banner.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/forms/handlers/content/blocks/banner.php b/app/forms/handlers/content/blocks/banner.php
+new file mode 100644
+--- /dev/null	
++++ b/app/forms/handlers/content/blocks/banner.php	
+@@ -0,0 +1,38 @@
++<?php
++
++function updateBannerBlock(int $id, array $fields): void
++{
++    $block = dbFind(Tables::Content, $id);
++    $blockContent = json_decode($block['content'], true);
++    $content = json_encode([
++        'banner' => uploadBanner($blockContent['banner'] ?? '', $id),
++    ]);
++
++    $query = getContentQuery();
++
++    $query->bindParam('content', $content);
++    $query->bindParam('id', $id, PDO::PARAM_INT);
++
++    executeContentQuery($query, $id);
++
++}
++
++function uploadBanner(string $image, int $id): string
++{
++    if(!empty($image) && !empty($_FILES['banner']) && $_FILES['banner']['error'] === 0) {
++        $newImageName = time() . "_{$_FILES['banner']['name']}";
++        $path = IMAGES_DIR . '/' . $newImageName;
++        uploadContentImage($_FILES['banner']['tmp_name'], $path, $id);
++
++
++        $oldFile = IMAGES_DIR . '/' . $image;
++        if (file_exists($oldFile)) {
++            unlink($oldFile);
++
++        }
++        return $newImageName;
++    }
++    return $image;
++}
++
++
+Index: assets/js/admin.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/assets/js/admin.js b/assets/js/admin.js
+new file mode 100644
+--- /dev/null	
++++ b/assets/js/admin.js	
+@@ -0,0 +1,37 @@
++const editSelectors = {
++    nav: {
++        wrapper: '.links-wrapper',
++        item: '.links-item',
++        removeAction: '.remove-link',
++        addAction: '.add-new-link'
++    }
++}
++
++$(document).on('click', editSelectors.nav.addAction, function (e) {
++    e.preventDefault();
++
++    let key = parseInt($(editSelectors.nav.wrapper).data('last_key'))
++    key ++
++
++    const template = `
++<div class=" mb-3 d-flex align-items-center justify-content-center px-3 bg-body-secondary py-3 links-item " >
++        <div class="col-10">
++            <label for="link_text_${key}">Title</label>
++            <input type="text" class="form-control" id="link_text_${key}"  name="links[${key}][title]">
++            <label for="link_${key}">Link</label>
++            <input type="text" class="form-control" id="link_${key}"  name="links[${key}][href]">
++        </div>
++        <div class="col-2">
++            <a href="#" class="btn btn-outline-danger mx-3 remove-link"><i class="fa-solid fa-trash"></i></a>
++        </div>
++    </div>
++</div>
++`
++    $(editSelectors.nav.wrapper).append(template).data('last_key', key)
++})
++
++$(document).on('click', editSelectors.nav.removeAction, function (e) {
++    e.preventDefault();
++    $(this).parents(editSelectors.nav.item).remove()
++
++})
+\ No newline at end of file

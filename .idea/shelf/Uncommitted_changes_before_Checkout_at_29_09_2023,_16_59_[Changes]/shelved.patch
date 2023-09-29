@@ -1,0 +1,188 @@
+Index: views/pages/admin/content/blocks/banner.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\nrequire_once ADMIN_PARTS_DIR . '/header.php';\n$fields = json_decode($block['content'], true);\n\n?>\n    <div class=\"container\" style=\"padding-top: 10em;\">\n        <div class=\"row\">\n            <div class=\"col-2\"></div>\n            <div class=\"col-8\">\n                <div class=\"card-nav\">\n                    <div class=\"card-header text-center\"><h3>Block: \"<?= $block['name'] ?>\"</h3></div>\n                    <form action=\"\">\n                        <div class=\"card-body\"></div>\n                        <div class=\"card-footer\"></div>\n                    </form>\n\n                </div>\n            </div>\n        </div>\n    </div>\n<?php\nrequire_once ADMIN_PARTS_DIR . '/footer.php';\n\n\n
+===================================================================
+diff --git a/views/pages/admin/content/blocks/banner.php b/views/pages/admin/content/blocks/banner.php
+--- a/views/pages/admin/content/blocks/banner.php	
++++ b/views/pages/admin/content/blocks/banner.php	
+@@ -5,15 +5,30 @@
+ ?>
+     <div class="container" style="padding-top: 10em;">
+         <div class="row">
+-            <div class="col-2"></div>
+-            <div class="col-8">
+-                <div class="card-nav">
++            <div class="col-2 "></div>
++            <div class="col-8 d-flex justify-content-center">
++                <div class="card w-100">
+                     <div class="card-header text-center"><h3>Block: "<?= $block['name'] ?>"</h3></div>
+-                    <form action="">
+-                        <div class="card-body"></div>
+-                        <div class="card-footer"></div>
++                    <form action="/" method="POST" enctype="multipart/form-data">
++                        <input type="hidden" name="type" value="edit_content">
++                        <input type="hidden" name="block_id" value="<?= $block['id']?>">
++                        <input type="hidden" name="block_name" value="<?= $block['name']?>">
++                        <div class="card-body">
++                            <?php if (!empty($fields['banner'])): ?>
++                            <div class="mb-3">
++                                <p>Current banner:</p>
++                                <img class="img-thumbnail w-50" src="<?= IMAGES_URI . "/$fields[banner]"?>" />
++                            </div>
++                        </div>
++                        <?php endif; ?>
++                        <div class="mb-3">
++                            <label class="px-3" for="banner">Upload new banner</label>
++                            <input type="file" class="form-control px-3 mt-1" name="banner">
++                        </div>
++                        <div class="card-footer">
++                            <button type="submit" class="btn btn-outline-primary btn-upd ">Update</button>
++                        </div>
+                     </form>
+-
+                 </div>
+             </div>
+         </div>
+Index: app/forms/handlers/content/content.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\n\nfunction editContent(): void\n{\n    $fields = $_POST;\n    $name = filter_input(INPUT_POST, 'block_name');\n    $id = filter_input(INPUT_POST, 'block_id', FILTER_VALIDATE_INT);\n\n    if (!$id) {\n        notify('Can not find block id', \"danger\");\n        redirectBack();\n    }\n\n    unset($fields['block_name'], $fields['block_id']);\n\n    match ($name) {\n        'navigation' => updateNavigationBlock($id, $fields),\n        default => redirectBack()\n    };\n}\n\nfunction uploadContentImage(string $tmpName, string $path, int $id): void\n{\n    if (!move_uploaded_file($tmpName, $path)) {\n        notify(\"We can not upload this file\", \"danger\");\n        redirectBack();\n    }\n}
+===================================================================
+diff --git a/app/forms/handlers/content/content.php b/app/forms/handlers/content/content.php
+--- a/app/forms/handlers/content/content.php	
++++ b/app/forms/handlers/content/content.php	
+@@ -15,14 +15,40 @@
+ 
+     match ($name) {
+         'navigation' => updateNavigationBlock($id, $fields),
++        'banner' => updateBannerBlock($id, $fields),
+         default => redirectBack()
+     };
+ }
+ 
+ function uploadContentImage(string $tmpName, string $path, int $id): void
+ {
++    if (!is_writable( IMAGES_DIR) ) {
++        chmod(IMAGES_DIR, 0777);
++    }
++
+     if (!move_uploaded_file($tmpName, $path)) {
+         notify("We can not upload this file", "danger");
+         redirectBack();
+     }
++}
++
++function getContentQuery(): PDOStatement
++{
++    $sql = "UPDATE " . Tables::Content->value . " SET content = :content WHERE id = :id";
++    return DB::connect()->prepare($sql);
++
++}
++
++function executeContentQuery(PDOStatement $query, int $id): void
++{
++    if ($query->execute()) {
++        notify("Block was successfully updated!");
++
++    } else {
++        notify("Something went wrong!", "danger");
++
++    }
++
++    redirect("/admin/content/edit/$id");
++
+ }
+\ No newline at end of file
+Index: app/forms/handlers/content/blocks/navigation.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\n\nfunction updateNavigationBlock(int $id, array $fields): void\n{\n    $block = dbFind(Tables::Content, $id);\n    $blockContent = json_decode($block['content'], true);\n    $links = $fields['links'] ?? [];\n    $content = json_encode([\n        'logo' => uploadNavigationLogo($blockContent['logo'] ?? '', $id),\n        'links' => array_values($links)\n    ]);\n    dd($content);\n}\n\nfunction uploadNavigationLogo(string $image, int $id): string\n{\n    if(!empty($image) && !empty($_FILES['logo']) && $_FILES['logo']['error'] === 0) {\n        $newImageName = time() . \"_{$_FILES['logo']['name']}\";\n        $path = IMAGES_DIR . '/' . $newImageName;\n        uploadContentImage($_FILES['logo']['tmp_name'], $path, $id);\n\n\n        $oldFile = IMAGES_DIR . '/' . $image;\n        if (file_exists($oldFile)) {\n            unlink($oldFile);\n\n        }\n        return $newImageName;\n    }\n    return $image;\n}\n\n\n
+===================================================================
+diff --git a/app/forms/handlers/content/blocks/navigation.php b/app/forms/handlers/content/blocks/navigation.php
+--- a/app/forms/handlers/content/blocks/navigation.php	
++++ b/app/forms/handlers/content/blocks/navigation.php	
+@@ -9,7 +9,15 @@
+         'logo' => uploadNavigationLogo($blockContent['logo'] ?? '', $id),
+         'links' => array_values($links)
+     ]);
+-    dd($content);
++
++
++    $query = getContentQuery();
++
++    $query->bindParam('content', $content);
++    $query->bindParam('id', $id, PDO::PARAM_INT);
++
++    executeContentQuery($query, $id);
++
+ }
+ 
+ function uploadNavigationLogo(string $image, int $id): string
+Index: views/pages/admin/content/blocks/navigation.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\nrequire_once ADMIN_PARTS_DIR . '/header.php';\n$fields = json_decode($block['content'], true);\n\n?>\n    <div class=\"container\" style=\"padding-top: 10em;\">\n        <div class=\"row\">\n            <div class=\"col-2 \"></div>\n            <div class=\"col-8 d-flex justify-content-center\">\n                <div class=\"card w-100\">\n                    <div class=\"card-header text-center\"><h3>Block: \"<?= $block['name'] ?>\"</h3></div>\n                    <form action=\"/\" method=\"POST\" enctype=\"multipart/form-data\">\n                        <input type=\"hidden\" name=\"type\" value=\"edit_content\">\n                        <input type=\"hidden\" name=\"block_id\" value=\"<?= $block['id']?>\">\n                        <input type=\"hidden\" name=\"block_name\" value=\"<?= $block['name']?>\">\n                        <div class=\"card-body\">\n                            <?php if (!empty($fields['logo'])): ?>\n                            <div class=\"mb-3\">\n                                <p>Current logo:</p>\n                                <img class=\"img-thumbnail\" src=\"<?= IMAGES_URI . \"/$fields[logo]\"?>\" />\n                            </div>\n                        </div>\n                           <?php endif; ?>\n                        <div class=\"mb-3\">\n                            <label class=\"px-3\" for=\"logo\">Upload new logo</label>\n                            <input type=\"file\" class=\"form-control px-3 mt-1\" name=\"logo\">\n                        </div>\n                        <h5 class=\"px-3\">Links:</h5>\n                        <div class=\"mb-3 col-6 offset-3\">\n                            <?php if (!empty($fields['links'])): ?>\n                                <?php foreach ($fields['links'] as $key => $link): ?>\n                                    <div class=\"mb-3\">\n                                        <div class=\" mb-3 d-flex align-items-center justify-content-center px-3 bg-body-secondary py-3 \" >\n                                            <div class=\"col-10\">\n                                                <label for=\"link_text_<?= $key ?>\">Title</label>\n                                                <input type=\"text\" class=\"form-control\" id=\"link_text_<?= $key ?>\" value=\"<?= $link['title'] ?>\">\n                                                <label for=\"link_<?= $key ?>\">Link</label>\n                                                <input type=\"text\" class=\"form-control\" id=\"link_<?= $key ?>\" value=\"<?= $link['href'] ?>\">\n                                            </div>\n                                            <div class=\"col-2\">\n                                                <a href=\"#\" class=\"btn btn-outline-danger mx-3\"><i class=\"fa-solid fa-trash\"></i></a>\n                                            </div>\n                                        </div>\n                                    </div>\n                                <?php endforeach; ?>\n                            <?php endif; ?>\n                        </div>\n                        <div class=\"card-footer\">\n                            <button type=\"submit\" class=\"btn btn-outline-primary btn-upd \">Update</button>\n                        </div>\n                    </form>\n\n                </div>\n            </div>\n        </div>\n    </div>\n<?php\nrequire_once ADMIN_PARTS_DIR . '/footer.php';\n\n\n
+===================================================================
+diff --git a/views/pages/admin/content/blocks/navigation.php b/views/pages/admin/content/blocks/navigation.php
+--- a/views/pages/admin/content/blocks/navigation.php	
++++ b/views/pages/admin/content/blocks/navigation.php	
+@@ -17,7 +17,7 @@
+                             <?php if (!empty($fields['logo'])): ?>
+                             <div class="mb-3">
+                                 <p>Current logo:</p>
+-                                <img class="img-thumbnail" src="<?= IMAGES_URI . "/$fields[logo]"?>" />
++                                <img class="img-thumbnail w-50" src="<?= IMAGES_URI . "/$fields[logo]"?>" />
+                             </div>
+                         </div>
+                            <?php endif; ?>
+@@ -26,24 +26,27 @@
+                             <input type="file" class="form-control px-3 mt-1" name="logo">
+                         </div>
+                         <h5 class="px-3">Links:</h5>
+-                        <div class="mb-3 col-6 offset-3">
++
++                        <?php $lastKey = array_key_last($fields['links']) ?? 0; ?>
++                        <div class="mb-3 col-6 offset-3 links-wrapper" data-last_key="<?= $lastKey ?>">
+                             <?php if (!empty($fields['links'])): ?>
+                                 <?php foreach ($fields['links'] as $key => $link): ?>
+                                     <div class="mb-3">
+-                                        <div class=" mb-3 d-flex align-items-center justify-content-center px-3 bg-body-secondary py-3 " >
++                                        <div class=" mb-3 d-flex align-items-center justify-content-center px-3 bg-body-secondary py-3 links-item " >
+                                             <div class="col-10">
+-                                                <label for="link_text_<?= $key ?>">Title</label>
+-                                                <input type="text" class="form-control" id="link_text_<?= $key ?>" value="<?= $link['title'] ?>">
+-                                                <label for="link_<?= $key ?>">Link</label>
+-                                                <input type="text" class="form-control" id="link_<?= $key ?>" value="<?= $link['href'] ?>">
++                                                <label for="link_text_${key}">Title</label>
++                                                <input type="text" class="form-control" id="link_text_${key}" value="<?= $link['title'] ?>" name="links[${key}][title]">
++                                                <label for="link_${key}">Link</label>
++                                                <input type="text" class="form-control" id="link_${key}" value="<?= $link['href'] ?>" name="links[${key}][href]">
+                                             </div>
+                                             <div class="col-2">
+-                                                <a href="#" class="btn btn-outline-danger mx-3"><i class="fa-solid fa-trash"></i></a>
++                                                <a href="#" class="btn btn-outline-danger mx-3 remove-link"><i class="fa-solid fa-trash"></i></a>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 <?php endforeach; ?>
+                             <?php endif; ?>
++                            <a href="#" class="btn btn-outline-info add-new-link">Add link</a>
+                         </div>
+                         <div class="card-footer">
+                             <button type="submit" class="btn btn-outline-primary btn-upd ">Update</button>
+Index: app/forms/handlers/content/blocks/index.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\nrequire_once __DIR__ . '/navigation.php';
+===================================================================
+diff --git a/app/forms/handlers/content/blocks/index.php b/app/forms/handlers/content/blocks/index.php
+--- a/app/forms/handlers/content/blocks/index.php	
++++ b/app/forms/handlers/content/blocks/index.php	
+@@ -1,2 +1,4 @@
+ <?php
+-require_once __DIR__ . '/navigation.php';
+\ No newline at end of file
++require_once __DIR__ . '/banner.php';
++
++require_once __DIR__ . '/navigation.php';
