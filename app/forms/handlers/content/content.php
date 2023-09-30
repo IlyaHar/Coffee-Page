@@ -15,6 +15,8 @@ function editContent(): void
 
     match ($name) {
         'navigation' => updateNavigationBlock($id, $fields),
+        'about_us' => updateAboutUsBlock($id, $fields),
+
         default => redirectBack()
     };
 }
@@ -25,4 +27,21 @@ function uploadContentImage(string $tmpName, string $path, int $id): void
         notify("We can not upload this file", "danger");
         redirectBack();
     }
+}
+
+function getContentQuery(): PDOStatement
+{
+    $sql = "UPDATE " . Tables::Content->value . " SET content = :content WHERE id = :id";
+    return DB::connect()->prepare($sql);
+}
+
+function executeContentQuery(PDOStatement $query, int $id): void
+{
+    if ($query->execute()) {
+        notify("Block was successfully updated!");
+    } else {
+        notify("Something went wrong!", "danger");
+    }
+
+    redirect("/admin/content/edit/$id");
 }
