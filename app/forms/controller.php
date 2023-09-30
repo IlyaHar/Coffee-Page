@@ -9,5 +9,6 @@ match(getRequestType()) {
     'create_order' => createOrder(),
     'edit_product' => editProduct(editProductParams()),
     'add_to_cart' => addToCart(addToCartParams()),
+    'edit_content' => editContent(),
     default => redirectBack()
 };

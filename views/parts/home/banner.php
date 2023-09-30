@@ -7,8 +7,10 @@
                 <h1 class="banner-text">
                     <?= $content['banner']['subtitle'] ?? '' ?>
                 </h1>
-                <?php if ($content ['banner']['link']): ?>
-                <a href="<?= $content ['banner']['link']['href'] ?>" class="banner-btn btn-info"><?= $content ['banner']['link']['title'] ?></a>
+                <?php if ($content['banner']['link']): ?>
+                    <a href="<?= $content['banner']['link']['href'] ?>"
+                       class="btn btn-outline-light banner-button"
+                    ><?= $content['banner']['link']['title'] ?></a>
                 <?php endif ?>
             </div>
         </div>
